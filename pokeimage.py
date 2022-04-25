@@ -48,7 +48,7 @@ def main():
     def handle_cbo_poke_sel(event):
         """
         sets the image of the pokemon as the image shown in the GUI. The image will be downloaded if it is not already in the 'images' folder. The 'Set as Desktop' will then be enabled.
-        :param1: event; user selects the desired pokemon from the dropdown list
+        :param: event; user selects the desired pokemon from the dropdown list
         :return: None
         """
         poke_name = cbo_poke_sel.get()
@@ -81,7 +81,7 @@ def main():
 def set_dtop_bkgrnd_img(path):
     """
     This function is the process of setting the desktop background. Uses the path of the desired image. Called when the 'set as desktop' button is clicked.
-    :param1: path: the path of the image of the desired pokemon- contained in the 'images folder
+    :param: path: the path of the image of the desired pokemon- contained in the 'images folder
     :returns: None
     """
     try:
@@ -93,8 +93,8 @@ def set_dtop_bkgrnd_img(path):
 def download_image_from_url(url, path):
     """
     Downloads the image from the URL. 
-    :param1: url: contained within the dictionary from the PokeAPI
-    :param2: path: the path to where the image will be saved within the 'images' folder
+    :param: url: contained within the dictionary from the PokeAPI
+    :param: path: the path to where the image will be saved within the 'images' folder
     :returns: message containing image data
     """
     if os.path.isfile(path):
